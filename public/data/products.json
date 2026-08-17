@@ -1,0 +1,32 @@
+[
+  {
+    "id": "xps-13",
+    "name": "Dell XPS 13 Plus",
+    "tag": "Бестселлер",
+    "glyph": "XPS",
+    "specs": ["Intel Core Ultra 7", "16 ГБ / 512 ГБ SSD", "13.4\" OLED 3.5K"],
+    "price": 1299,
+    "oldPrice": 1599,
+    "url": "https://www.dell.com"
+  },
+  {
+    "id": "inspiron-15",
+    "name": "Dell Inspiron 15",
+    "tag": "Оптимально",
+    "glyph": "INS",
+    "specs": ["Intel Core i5", "8 ГБ / 256 ГБ SSD", "15.6\" FHD"],
+    "price": 649,
+    "oldPrice": 799,
+    "url": "https://www.dell.com"
+  },
+  {
+    "id": "alienware-m16",
+    "name": "Alienware m16",
+    "tag": "Для игр",
+    "glyph": "ALW",
+    "specs": ["Intel Core i9 / RTX 4070", "32 ГБ / 1 ТБ SSD", "16\" QHD+ 240Hz"],
+    "price": 2099,
+    "oldPrice": 2399,
+    "url": "https://www.dell.com"
+  }
+]

@@ -1,0 +1,88 @@
+@use '../styles/variables' as v;
+@use '../styles/mixins' as m;
+
+.product {
+  border: 1px solid v.$line;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+
+  &__thumb {
+    height: 150px;
+    background: linear-gradient(135deg, v.$navy 0%, v.$navy-2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__glyph {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: v.$blue-br;
+    font-family: v.$font-display;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  &__tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: v.$blue-br;
+    color: v.$navy;
+    font-family: v.$font-mono;
+    font-size: 10.5px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-weight: 700;
+  }
+
+  &__body {
+    padding: 20px 22px 22px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-size: 17px;
+    }
+  }
+
+  &__specs {
+    font-family: v.$font-mono;
+    font-size: 12.5px;
+    color: v.$ink-soft;
+    margin-top: 10px;
+    line-height: 1.8;
+  }
+
+  &__foot {
+    margin-top: auto;
+    padding-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__price {
+    font-family: v.$font-display;
+    font-size: 19px;
+  }
+
+  &__old {
+    font-size: 13px;
+    color: v.$ink-soft;
+    text-decoration: line-through;
+    font-family: v.$font-body;
+    margin-right: 6px;
+  }
+}
+

@@ -1,0 +1,12 @@
+@use '../styles/variables' as v;
+@use '../styles/mixins' as m;
+
+.lineup {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+
+    @include m.tablet {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,163 @@
+@use '../styles/variables' as v;
+@use '../styles/mixins' as m;
+
+.hero {
+    background: 
+    radial-gradient(1100px 500px at 78% -10%, rgba(76, 194, 255, 0.20), transparent 60%),
+    linear-gradient(180deg, v.$navy 0%, v.$navy-2 100%);
+    color: #fff;
+    padding: 76px 0 0;
+    overflow: hidden;
+
+    &__top {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 40px;
+        align-items: center;
+
+        @include m.tablet {
+        grid-template-columns: 1fr;
+        }
+    }
+
+
+    &__strip {
+        margin-top: 56px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 18px 0;
+
+       .wrap{
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        font-family: v.$font-mono;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.55);
+        letter-spacing: 0.03em;
+        }
+
+        strong{
+            color: #fff;
+        }
+
+        @include m.mobile{
+            .wrap{
+                gap: 16px;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.eyebrow {
+    font-family: v.$font-mono;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: v.$blue-br;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &::before{
+        content: '';
+        width: 20px;
+        height: 1px;
+        background:v.$blue-br;
+    }
+}
+
+.hero h1 {
+    font-size: clamp(34px, 4.4vw, 58px);
+    line-height: 1.04;
+    font-weight: 600;
+
+    em {
+        font-style: normal;
+        color: v.$blue-br;
+    }
+}
+
+.lede {
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.72);
+    max-width: 480px;
+}
+
+.cta-row {
+    display: flex;
+    gap: 14px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+
+    @include m.mobile {
+        .btn {
+            width: 100%;
+        }
+    }
+}
+
+.specsheet {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 6px;
+    padding: 22px 24px 26px;
+    font-family: v.$font-mono;
+    font-size: 13px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+        padding-bottom: 12px;
+        margin-bottom: 14px;
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 9px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+
+        .k {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .v {
+            color: #fff;
+            text-align: right;
+        }
+    }
+
+    &__price {
+        margin-top: 16px;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+
+        .amt {
+            font-family: v.$font-display;
+            font-size: 26px;
+            color: v.$blue-br;
+        }
+
+        .old {
+            text-decoration: line-through;
+            color: rgba(255, 255, 255, 0.4);
+            margin-right: 8px;
+        }
+    }
+}

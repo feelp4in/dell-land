@@ -1,0 +1,91 @@
+@use '../styles/variables' as v;
+@use '../styles/mixins' as m;
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+
+
+    &__topbar {
+        background-color: v.$navy;
+        color: #fff;
+        font-family: v.$font-display;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+
+        .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 14px;
+        gap: 8px;
+        flex-wrap: wrap;
+        }
+
+        .dot {
+        color: v.$blue-br;
+        }
+
+        @include m.mobile {
+            .wrap {
+            justify-content: center;
+            text-align: center;
+            }
+            span:last-child {
+            display: none;
+            }
+    }
+
+}
+
+&__main {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid v.$line;
+
+    .wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 24px;
+    }
+}
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: v.$font-display;
+  font-weight: 700;
+  font-size: 22px;
+
+  &__mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: v.$blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 17px;
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  font-size: 14px;
+  color: v.$ink-soft;
+
+  a:hover {
+    color: v.$blue;
+  }
+
+  @include m.tablet {
+    display: none;
+  }
+}
