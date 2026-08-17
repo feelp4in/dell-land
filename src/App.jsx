@@ -1,7 +1,7 @@
 import React from 'react';
-import Lineup from './components/Lineup';
-import Header from './components/Header';
-import HeroPage from './components/HeroPage';
+import Lineup from './components/Lineup/Lineup';
+import Header from './components/Header/Header';
+import HeroPage from './components/HeroPage/HeroPage';
 
 const App = () => {
   return (

@@ -1,5 +1,5 @@
-@use '../styles/variables' as v;
-@use '../styles/mixins' as m;
+@use '../../styles/variables' as v;
+@use '../../styles/mixins.scss' as m;
 
 .product {
   border: 1px solid v.$line;

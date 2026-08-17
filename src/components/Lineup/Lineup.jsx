@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import ProductCard from './ProductCard'
-import '../components/Lineup.scss'
+import ProductCard from '../ProductCard/ProductCard'
+import './Lineup.scss'
 
 function Lineup() {
   const [products, setProducts] = useState([])
