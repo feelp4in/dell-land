@@ -13,7 +13,7 @@ const Header = () => {
         <div className="header__main">
             <div className="wrap">
                 <div className="logo">
-                    <img src="" alt="" /> Dell
+                    <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="Dell" /> Dell
                 </div>
                 <nav className="nav-links">
                     <a href="#lineup">Модели</a>

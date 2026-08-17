@@ -160,5 +160,22 @@
             color: rgba(255, 255, 255, 0.4);
             margin-right: 8px;
         }
+
+        @include m.mobile {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 14px;
+
+            > span {
+                display: flex;
+                align-items: baseline;
+            }
+
+            .btn {
+                width: 100%;
+                min-height: 44px;
+                line-height: 1.3;
+            }
+        }
     }
 }
