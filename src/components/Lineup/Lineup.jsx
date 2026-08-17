@@ -22,10 +22,25 @@ function Lineup() {
   if (error) return <p>Ошибка: {error}</p>
 
   return (
-    <section className="lineup wrap">
-      {products.map(p => (
-        <ProductCard key={p.id} {...p} />
-      ))}
+    <section className="section bg-ice" id="lineup">
+      <div className="wrap">
+        <div className="section-head">
+          <div className="eyebrow">Линейка</div>
+          <h2>Модель под ваши задачи</h2>
+          <p>Три направления — офис и учёба, творчество и мультимедиа, игры и высокие нагрузки.</p>
+        </div>
+
+        {loading && <p>Загрузка моделей...</p>}
+        {error && <p>Ошибка: {error}</p>}
+
+        {!loading && !error && (
+          <div className="lineup">
+            {products.map(p => (
+              <ProductCard key={p.id} {...p} />
+            ))}
+          </div>
+        )}
+      </div>
     </section>
   )
 }

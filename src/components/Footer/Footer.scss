@@ -1,0 +1,24 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.footer {
+  background: v.$navy;
+  color: rgba(255, 255, 255, 0.55);
+  padding: 36px 0;
+  font-size: 13px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__link {
+    color: rgba(255, 255, 255, 0.75);
+    &:hover {
+      color: #fff;
+    }
+  }
+}

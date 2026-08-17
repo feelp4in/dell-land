@@ -1,12 +1,27 @@
-@use '../../styles/variables' as v;
-@use '../../styles/mixins.scss' as m;
+@use "../../styles/variables" as v;
+@use "../../styles/mixins.scss" as m;
+
+.bg-ice {
+  background: v.$ice;
+}
 
 .lineup {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 44px;
 
-    @include m.tablet {
-        grid-template-columns: 1fr;
-    }
+  @include m.tablet {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lineup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  @include m.tablet {
+    grid-template-columns: 1fr;
+  }
 }
