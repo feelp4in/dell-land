@@ -8,7 +8,7 @@ function Lineup() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch('/data/products.json')
+    fetch(`${import.meta.env.BASE_URL}data/products.json`)
       .then(res => {
         if (!res.ok) throw new Error('Не удалось загрузить данные')
         return res.json()
